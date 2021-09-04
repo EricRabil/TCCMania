@@ -33,6 +33,7 @@
 		1DD2952B26E3D1980018873B /* entitlements.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = entitlements.plist; sourceTree = "<group>"; };
 		1DD2952C26E3D4260018873B /* AccessTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessTarget.swift; sourceTree = "<group>"; };
 		1DD2952E26E3D4E10018873B /* TCCIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCCIntent.swift; sourceTree = "<group>"; };
+		1DD2953026E3D7570018873B /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +51,7 @@
 		1DD294F726E3C21D0018873B = {
 			isa = PBXGroup;
 			children = (
+				1DD2953026E3D7570018873B /* README.md */,
 				1DD2950226E3C21D0018873B /* TCCMania */,
 				1DD2950126E3C21D0018873B /* Products */,
 			);
