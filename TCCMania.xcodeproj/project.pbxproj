@@ -3,11 +3,15 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		1DD2950426E3C21D0018873B /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DD2950326E3C21D0018873B /* main.swift */; };
+		1DD2950C26E3C29D0018873B /* TCCService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DD2950B26E3C29D0018873B /* TCCService.swift */; };
+		1DD2952A26E3CE360018873B /* SwiftCLI in Frameworks */ = {isa = PBXBuildFile; productRef = 1DD2952926E3CE360018873B /* SwiftCLI */; };
+		1DD2952D26E3D4260018873B /* AccessTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DD2952C26E3D4260018873B /* AccessTarget.swift */; };
+		1DD2952F26E3D4E10018873B /* TCCIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DD2952E26E3D4E10018873B /* TCCIntent.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +29,10 @@
 /* Begin PBXFileReference section */
 		1DD2950026E3C21D0018873B /* TCCMania */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = TCCMania; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DD2950326E3C21D0018873B /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		1DD2950B26E3C29D0018873B /* TCCService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCCService.swift; sourceTree = "<group>"; };
+		1DD2952B26E3D1980018873B /* entitlements.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = entitlements.plist; sourceTree = "<group>"; };
+		1DD2952C26E3D4260018873B /* AccessTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessTarget.swift; sourceTree = "<group>"; };
+		1DD2952E26E3D4E10018873B /* TCCIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCCIntent.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1DD2952A26E3CE360018873B /* SwiftCLI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -57,9 +66,21 @@
 		1DD2950226E3C21D0018873B /* TCCMania */ = {
 			isa = PBXGroup;
 			children = (
+				1DD2950A26E3C2970018873B /* Enums */,
 				1DD2950326E3C21D0018873B /* main.swift */,
+				1DD2952B26E3D1980018873B /* entitlements.plist */,
 			);
 			path = TCCMania;
+			sourceTree = "<group>";
+		};
+		1DD2950A26E3C2970018873B /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				1DD2950B26E3C29D0018873B /* TCCService.swift */,
+				1DD2952C26E3D4260018873B /* AccessTarget.swift */,
+				1DD2952E26E3D4E10018873B /* TCCIntent.swift */,
+			);
+			path = Enums;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -78,6 +99,9 @@
 			dependencies = (
 			);
 			name = TCCMania;
+			packageProductDependencies = (
+				1DD2952926E3CE360018873B /* SwiftCLI */,
+			);
 			productName = TCCMania;
 			productReference = 1DD2950026E3C21D0018873B /* TCCMania */;
 			productType = "com.apple.product-type.tool";
@@ -105,6 +129,9 @@
 				Base,
 			);
 			mainGroup = 1DD294F726E3C21D0018873B;
+			packageReferences = (
+				1DD2952826E3CE360018873B /* XCRemoteSwiftPackageReference "SwiftCLI" */,
+			);
 			productRefGroup = 1DD2950126E3C21D0018873B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -119,6 +146,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1DD2950C26E3C29D0018873B /* TCCService.swift in Sources */,
+				1DD2952D26E3D4260018873B /* AccessTarget.swift in Sources */,
+				1DD2952F26E3D4E10018873B /* TCCIntent.swift in Sources */,
 				1DD2950426E3C21D0018873B /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -244,6 +274,7 @@
 		1DD2950826E3C21D0018873B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = TCCMania/entitlements.plist;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6UW2D7F2RU;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -255,6 +286,7 @@
 		1DD2950926E3C21D0018873B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = TCCMania/entitlements.plist;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6UW2D7F2RU;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -285,6 +317,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1DD2952826E3CE360018873B /* XCRemoteSwiftPackageReference "SwiftCLI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/jakeheis/SwiftCLI";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1DD2952926E3CE360018873B /* SwiftCLI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1DD2952826E3CE360018873B /* XCRemoteSwiftPackageReference "SwiftCLI" */;
+			productName = SwiftCLI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 1DD294F826E3C21D0018873B /* Project object */;
 }
